@@ -1,0 +1,438 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Untree.co">
+  <link rel="shortcut icon" href="{% static 'images/logo-branco.png' %}">
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap4" />
+
+  <!-- Bootstrap CSS -->
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="{% static 'css/tiny-slider.css' %}" rel="stylesheet">
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <title>The Greens Travel</title>
+
+
+</head>
+
+<body>
+<!-- Start Header/Navigation -->
+<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="THE GREENS TRAVEL">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'index' %}">
+      <img src="{% static 'images/logo-branco.png' %}" alt="The Greens Travel" width="70" height="50">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsFurni">
+      <ul class="custom-navbar-nav navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'index' %}">Home</a>
+        </li>
+        <li class="dropdown-custom">
+          <a class="nav-link" href="#">Reservas <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="{% url 'voosehoteis' %}">Vôos e Hoteis</a></li>
+            <li><a href="{% url 'aluguelcarros' %}">Aluguel de Veículo</a></li>
+            <li><a href="{% url 'tours' %}">Passeios e Tours</a></li>
+          </ul>
+        </li>  
+        <li class="dropdown-custom">
+          <a class="nav-link" href="#">Ingressos <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="{% url 'parques' %}">Ingressos Parques</a></li>
+            <li><a href="{% url 'esportivos' %}">Ingressos Esportivos</a></li>
+          </ul>
+        </li>  
+        <li><a class="nav-link" href="{% url 'mundialclubes' %}">Mundial de Clubes 2025</a></li> 
+        <li><a class="nav-link" href="{% url 'consular' %}">Assessoria Consular</a></li>
+        <li class="dropdown-custom">
+          <a class="nav-link" href="#">Serviços <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="{% url 'cambio' %}">Conta Internacional</a></li>
+            <li><a href="{% url 'esportivos' %}">e-SIM Internacional</a></li>
+          </ul>
+        </li> 
+        <li><a class="nav-link" href="{% url 'contato' %}">Contato</a></li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+<!-- End Header/Navigation -->
+
+  <!-- Start Hero Section -->
+  <div class="hero">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-lg-5">
+          <div class="intro-excerpt">
+            <h1>Sua viagem começa agora<span clsas="d-block"></span></h1>
+            <p class="mb-4">Passagens aéreas, hospedagem, ingressos dos parques e muito mais com as melhores condições</p>
+            <p><a href="{% url 'parques' %}" class="btn btn-secondary me-2">Ingressos</a>
+              <a href="{% url 'voosehoteis' %}" class="btn btn-white-outline">Explorar</a></p>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4"></button>
+            </div>
+            
+            <!-- Slides -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{% static 'images/secao0104.jpg' %}" class="img-fluid img-rounded">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'images/secao0103.jpg' %}" class="img-fluid img-rounded">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'images/secao0106.jpg' %}" class="img-fluid img-rounded">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'images/secao0105.jpg' %}" class="img-fluid img-rounded">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'images/secao0108.jpg' %}" class="img-fluid img-rounded">
+              </div>
+            </div>
+   
+            <!-- Controles -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+   
+   <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+   <script>
+     document.addEventListener('DOMContentLoaded', function() {
+       var myCarousel = new bootstrap.Carousel(document.getElementById('heroCarousel'), {
+         interval: 3000,
+         ride: 'carousel'
+       });
+     });
+   </script>
+  <!-- End Hero Section -->
+
+  <!-- Start Product Section -->
+  <div class="product-section">
+    <div class="container">
+      <div class="row">
+        <!-- Start Column 1 -->
+        <div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
+          <h2 class="mb-4 section-title">Especialistas em realizar seu sonho de conhecer os Estados Unidos</h2>
+          <p class="mb-4">Da emissão do passaporte aos ingressos dos parques, cuidamos de cada detalhe para você aproveitar ao máximo sua viagem dos sonhos. </p>
+        </div> 
+        <!-- End Column 1 -->
+
+        <!-- Start Column 2 -->
+        <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+          <a class="product-item" href="{% url 'parques' %}">
+            <img src="{% static 'images/secao0201.jpg' %}" class="img-fluid product-thumbnail img-rounded">
+            <h3 class="product-title">Ingressos dos Parques</h3>
+            <strong class="product-price"></strong>
+            <span class="icon-cross">
+              <img src="{% static 'images/cross.svg' %}" class="img-fluid">
+            </span>
+          </a>
+        </div>
+        <!-- End Column 2 -->
+
+        <!-- Start Column 3 -->
+        <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+          <a class="product-item" href="{% url 'mundialclubes' %}">
+            <img src="{% static 'images/secao0202.jpg' %}" class="img-fluid product-thumbnail img-rounded">
+            <h3 class="product-title">Mundial de Clubes 2025</h3>
+            <strong class="product-price"></strong>
+            <span class="icon-cross">
+              <img src="{% static 'images/cross.svg' %}" class="img-fluid">
+            </span>
+          </a>
+        </div>
+        <!-- End Column 3 -->
+
+        <!-- Start Column 4 -->
+        <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+          <a class="product-item" href="{% url 'consular' %}">
+            <img src="{% static 'images/secao0203.jpg' %}" class="img-fluid product-thumbnail img-rounded">
+            <h3 class="product-title">Assessoria Consular</h3>
+            <strong class="product-price"></strong>
+            <span class="icon-cross">
+              <img src="{% static 'images/cross.svg' %}" class="img-fluid">
+            </span>
+          </a>
+        </div>
+        <!-- End Column 4 -->
+      </div>
+    </div>
+  </div>
+  <!-- End Product Section -->
+
+  <!-- Start We Help Section -->
+  <div class="we-help-section">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-lg-7 mb-5 mb-lg-0">
+          <div class="imgs-grid">
+            <div class="grid grid-1"><img src="{% static 'images/secao0416.jpg' %}" alt="Untree.co"></div>
+            <div class="grid grid-2"><img src="{% static 'images/secao0418.jpg' %}" alt="Untree.co"></div>
+            <div class="grid grid-3"><img src="{% static 'images/secao0419.jpg' %}" alt="Untree.co"></div>
+          </div>
+        </div>
+        <div class="col-lg-5 ps-lg-5">
+          <h2 class="section-title mb-4">OS MAIORES CLUBES DO MUNDO EM UM SÓ LUGAR</h2>
+          <p>Garanta seu lugar na história: 32 clubes, 12 estádios e toda a emoção do primeiro Mundial de Clubes expandido nos Estados Unidos</p>
+
+          <ul class="list-unstyled custom-list my-4">
+            <li>32 clubes disputarão a competição</li>
+            <li>12 estádios receberão um total de 54 jogos</li>
+            <li>Disputado entre os dias 15 de junho e 13 de julho</li>
+            <li>Maior torneio da história entre clubes já registrado</li>
+          </ul>
+          <p><a href="{% url 'mundialclubes' %}" class="btn">Explorar</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End We Help Section -->
+
+  <!-- Start Why Choose Us Section -->
+  <div class="why-choose-section">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-lg-6">
+          <h2 class="section-title">Porque escolher a gente</h2>
+          <p>Na The Green`s, não vendemos apenas ingressos e serviços - oferecemos tranquilidade e experiências inesquecíveis em Orlando. Com nossa expertise especializada, cuidamos de cada detalhe da sua viagem: desde a escolha estratégica dos ingressos para os parques da Disney e eventos esportivos, até a seleção da hospedagem ideal e transfers confiáveis.</p>
+
+          <div class="row my-5">
+            <div class="col-6 col-md-6">
+              <div class="feature">
+                <div class="icon">
+                  <img src="{% static 'images/return.svg' %}" alt="Image" class="imf-fluid">
+                </div>
+                <h3>Conhecimento Local</h3>
+                <p>Anos de experiência em Orlando nos permitem compartilhar as melhores dicas e segredos do destino, garantindo momentos únicos em sua viagem.</p>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-6">
+              <div class="feature">
+                <div class="icon">
+                  <img src="{% static 'images/bag.svg' %}" alt="Image" class="imf-fluid">
+                </div>
+                <h3>Atendimento Personalizado</h3>
+                <p>Do primeiro contato ao fim da viagem, oferecemos suporte exclusivo e personalizado, garantindo que cada detalhe seja planejado conforme suas expectativas.</p>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-6">
+              <div class="feature">
+                <div class="icon">
+                  <img src="{% static 'images/support.svg' %}" alt="Image" class="imf-fluid">
+                </div>
+                <h3>Suporte 24/7</h3>
+                <p>Conte com nossa equipe 24 horas por dia, 7 dias por semana. Estamos sempre prontos para resolver qualquer situação durante sua estadia.</p>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-6">
+              <div class="feature">
+                <div class="icon">
+                  <img src="{% static 'images/truck.svg' %}" alt="Image" class="imf-fluid">
+                </div>
+                <h3>Transfers Exclusivos</h3>
+                <p>Garanta sua locomoção com conforto e segurança. Nossa frota moderna e motoristas profissionais asseguram pontualidade em todos os seus trajetos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="img-wrap">
+            <img src="{% static 'images/whychooseus.jpg' %}" alt="Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Why Choose Us Section -->
+
+
+<!-- Start Footer Section -->
+<footer class="footer-section">
+  <div class="container relative">
+    <div class="row">
+      <div class="col-lg-8">
+        <!-- Subscription Form -->
+        <div class="subscription-form">
+
+
+          <h3 class="d-flex align-items-center">
+            <span class="me-1"><img src="{% static 'images/envelope-outline.svg' %}" alt="Image" class="img-fluid"></span>
+            <span>Subscribe to Newsletter</span>
+          </h3>
+
+          <form action="{% url 'newsletter_signup' %}" method="post" class="row g-3">
+            {% csrf_token %}
+            <div class="col-auto">
+                <input type="text" name="name" class="form-control" placeholder="Enter your name" required>
+            </div>
+            <div class="col-auto">
+                <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary">
+                    <span class="fa fa-paper-plane"></span>
+                </button>
+            </div>
+        </form>
+
+        <div
+        <h3 class="d-flex align-items-center mb-4">
+          <a href="https://instagram.com/thegreens.travel" target="_blank" class="d-flex align-items-center text-decoration-none">
+            <i class="fab fa-instagram me-2" style="font-size: 24px; color: #3b5d50;"></i>
+            <span style="color: #3b5d50;">@thegreens.travel</span>
+          </a>
+        </h3>
+        </div>
+
+
+          <!-- Logos Section integrada dentro do subscription-form -->
+          <div class="mt-2">
+            <!-- Primeira linha com duas logos quadradas -->
+            <div class="d-flex align-items-center mb-2">
+              <img src="{% static 'images/logo-verde.png' %}" alt="Logo Verde" class="img-fluid" style="width: 150px; height: 150px; object-fit: contain;">
+              <img src="{% static 'images/logo-fifa.png' %}" alt="Logo FIFA" class="img-fluid me-3" style="width: 100px; height: 100px; object-fit: contain;">
+            </div>
+            <!-- Segunda linha com logo retangular -->
+            <div>
+              <img src="{% static 'images/logo-cadastur.png' %}" alt="Logo Cadastur" class="img-fluid" style="max-width: 200px; object-fit: contain;">
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-top copyright mt-3">
+      <div class="row pt-3">
+        <div class="col-lg-6">
+          <p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed The Green`s Travel  </p>
+        </div>
+
+        <div class="col-lg-6 text-center text-lg-end">
+          <ul class="list-unstyled d-inline-flex ms-auto">
+            <li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdowns = document.querySelectorAll('.dropdown-custom');
+    const isMobile = window.innerWidth <= 768;
+    
+    // Garante que todos os dropdowns começam fechados
+    dropdowns.forEach(dropdown => {
+        const content = dropdown.querySelector('.dropdown-content');
+        content.style.display = 'none';
+    });
+
+    dropdowns.forEach(function(dropdown) {
+        const link = dropdown.querySelector('a');
+        const content = dropdown.querySelector('.dropdown-content');
+
+        if (isMobile) {
+            // Comportamento para mobile (click)
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                // Fecha outros dropdowns
+                dropdowns.forEach(d => {
+                    if (d !== dropdown) {
+                        d.querySelector('.dropdown-content').style.display = 'none';
+                    }
+                });
+                // Toggle do dropdown atual
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            });
+        } else {
+            // Comportamento para desktop (hover)
+            dropdown.addEventListener('mouseenter', function() {
+                content.style.display = 'block';
+            });
+            
+            dropdown.addEventListener('mouseleave', function() {
+                content.style.display = 'none';
+            });
+        }
+    });
+});
+  </script>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer Section -->
+</body>
+
+<!-- Botão WhatsApp -->
+<style>
+.whatsapp-float {
+   position: fixed;
+   right: 25px;
+   bottom: 25px;
+   background-color: #25d366;
+   color: #FFF;
+   border-radius: 50px;
+   text-align: center;
+   font-size: 30px;
+   box-shadow: 2px 2px 3px #999;
+   z-index: 100;
+   width: 60px;
+   height: 60px;
+   display: flex;
+   align-items: center;     /* Centraliza verticalmente */
+   justify-content: center; /* Centraliza horizontalmente */
+   transition: all 0.3s;
+}
+
+.whatsapp-float:hover {
+   transform: scale(1.1);
+   background-color: #20ba5a;
+}
+  </style>
+  
+  <a href="http://wa.me/5511919441999" class="whatsapp-float" target="_blank">
+     <i class="fab fa-whatsapp"></i>
+  </a>
