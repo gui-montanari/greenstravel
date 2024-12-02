@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'lso#*@!z51r6(f4yh&^d*q#@0pe0zxxj1-f=pb8h&g+imxb&il'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['18.224.69.136', 'localhost', '127.0.0.1', '*', 'thegreenstravel.com', 'www.thegreenstravel.com', 'thegreenstravel.com.br', 'www.thegreenstravel.com.br', 'thegreenstravel.com.br.', 'www.thegreenstravel.com.br.']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -124,12 +124,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-]
-
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
 
 JAZZMIN_SETTINGS = {
     "site_title": "The Greens Travel",
