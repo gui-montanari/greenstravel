@@ -1,0 +1,41 @@
+body.login-page {
+    background-color: #f5f5f5;
+ }
+ 
+ .login-box {
+    background-color: #e8f5e9;
+ }
+ 
+ .card {
+    background-color: #e8f5e9;
+    border-radius: 15px !important;
+    overflow: hidden;
+    border: none !important; /* Remove borda */
+    box-shadow: none !important; /* Remove sombra */
+ }
+ 
+ .login-card-body {
+    background-color: #e8f5e9;
+    border-radius: 15px !important;
+ }
+ 
+ .dark-mode.login-page {
+    background-color: #f5f5f5 !important;
+ }
+ 
+ .login-logo {
+    background-color: #ffffff;
+    border-radius: 15px 15px 0 0;
+    padding: 20px;
+    margin-bottom: 0 !important;
+ }
+
+
+ .sidebar-dark-success {
+    background-color: #4a5568 !important; /* Cinza mais claro */
+}
+
+/* Para o item selecionado */
+.sidebar-dark-success .nav-sidebar .nav-item > .nav-link.active {
+    background-color: #576173 !important; /* Um pouco mais claro que o fundo */
+}

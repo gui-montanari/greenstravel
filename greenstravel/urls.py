@@ -1,6 +1,8 @@
 from django.contrib import admin
 from django.urls import path
 from usuarios import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -15,4 +17,4 @@ urlpatterns = [
     path('passeios-e-tours/', views.tours, name='tours'),
     path('cambio/', views.cambio, name='cambio'),
     path('newsletter-signup/', views.newsletter_signup, name='newsletter_signup'),    # Adicione outras rotas conforme necessário
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
