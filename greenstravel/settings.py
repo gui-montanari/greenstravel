@@ -25,7 +25,7 @@ SECRET_KEY = 'lso#*@!z51r6(f4yh&^d*q#@0pe0zxxj1-f=pb8h&g+imxb&il'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['18.224.69.136', 'localhost', '127.0.0.1', '*', 'thegreenstravel.com', 'www.thegreenstravel.com', 'thegreenstravel.com.br', 'www.thegreenstravel.com.br', 'thegreenstravel.com.br.', 'www.thegreenstravel.com.br.']
 
 
 # Application definition
